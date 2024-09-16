@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "optimize-images": "node optimize-images.js",
+    "build": "npm run optimize-images && vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "sharp": "^0.33.5",
     "vue": "^3.2.13",
     "vue-router": "^4.4.3"
   },
@@ -42,3 +44,4 @@
     "not ie 11"
   ]
 }
+
